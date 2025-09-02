@@ -12,6 +12,7 @@ import * as task4 from "./task4.js";
 import * as task5 from "./task5.js";
 import * as task6 from "./task6.js";
 import * as task7 from "./task7.js";
+//import { Group,Player } from "./task6.js";
 
 let task;
 
@@ -49,16 +50,23 @@ switch (task) {
     break;
   case 5:
     globalThis.Player = task5.Player;
-    const player5 = new Player("Grog", 4);
+    const player5 = new Player("Grog", 1);
+    player5.expUp(101)
     console.log(player5);
     break;
   case 6:
     globalThis.Player = task6.Player;
-    const player6 = new Player("Grog", 4);
+    const player6 = new Player("Grog", 1);
+    const group1 = new Group(1);
+    group1.playerAdd(player6);
+
     console.log(player6);
     break;
   case 7:
     globalThis.Player = task7.Player;
-    const player7 = new Player("Grog", 4);
+    const player7 = new Player("Grog", 1);
+    player7.itemAdd("Elixir",1);
+    player7.itemAdd("Elixir",1);
+    player7.itemRev("Elixir")
     console.log(player7);
 };
